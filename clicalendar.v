@@ -8,7 +8,7 @@ import time
 fn main() {
 	check()
 	    mut app := cli.Command{
-        name: 'CLI Calendar'
+        name: 'cli-calendar'
         description: 'A simple CLI calendar'
         version: '1.0.0'
         execute: fn (cmd cli.Command) ? {
