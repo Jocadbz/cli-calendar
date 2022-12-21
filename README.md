@@ -2,24 +2,21 @@
 A simple event manager calendar
 
 ### Usage
-```
-Usage: cli-calendar [flags] [commands]
+Run `cli-calendar` to create the config files, if they yet don't exist. You can create and remove them as you wish.
+The `cli-calendar_daemon` checks your events and if any of they match the day you are, it sends a notification warning you.
 
-A simple CLI calendar
-
-Flags:
-  -help               Prints help information.
-  -version            Prints version information.
-  -man                Prints the auto-generated manpage.
-
-Commands:
-  create              Creates a event
-  remove              Removes a event
-  help                Prints help information.
-  version             Prints version information.
-  man                 Prints the auto-generated manpage.
+### Configuration
+- config.toml
+```toml
+daemon-time = 60 # The amount of time (in minutes) the daemon takes to check your events again - Default: 60
 ```
 
+### Using the daemon
+Just add `clicalendar_daemon` to your autostart files, or in your window manager config files.
+If you want to kill the daemon, you can use `killall` command:
+```bash
+killall clicalendar_daemon
+```
 
 ### Installing from source
 ```bash
