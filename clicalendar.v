@@ -3,7 +3,6 @@ module main
 import os
 import toml
 import cli
-import time
 
 fn main() {
 	check()
@@ -88,7 +87,7 @@ fn create_event() {
 name = '${name_d}'
 date = '${date_d}'
 "
-	os.write_file('${os.home_dir()}/.config/cli-calendar/events/${name.output}.toml', toml) or {
+	os.write_file("${os.home_dir()}/.config/cli-calendar/events/${name.output.replace('\n', '')}.toml", toml) or {
 		panic(err)
 	}
 }
