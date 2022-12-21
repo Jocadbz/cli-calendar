@@ -18,6 +18,11 @@ If you want to kill the daemon, you can use `killall` command:
 killall clicalendar_daemon
 ```
 
+### Dependencies
+- GNU date
+- GNU whoami
+- libnotify
+
 ### Installing from source
 ```bash
 # You need the V compiler
